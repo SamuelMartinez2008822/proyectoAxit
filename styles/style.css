@@ -26,7 +26,7 @@ nav a {
 }
 
 .banner {
-    display: flex;  
+    display: flex; 
     background-image: linear-gradient(#000000b9), url(../assets/images/headerBg.png);
     background-size: cover;
 }
@@ -269,7 +269,7 @@ nav a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 202px 0 220px;
+    padding: 0 202px 0 200px;
 }
 
 .standardInfo h2 {
@@ -283,11 +283,12 @@ nav a {
     padding-bottom: 30px;
 }
 
-.standardSect div {
+.imgStandard {
     width: 50%;
     padding: 150px 0;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .standardSect img {
@@ -396,7 +397,7 @@ h1 {
     color: #00000052;
 }
 
-.masPopular {
+.lastPlan {
     padding-bottom: 100px;
 }
 
@@ -418,6 +419,7 @@ h1 {
 
 .equipo {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 100px;
 }
@@ -536,115 +538,47 @@ footer p {
     font-size: 14px;
 }
 
-@media (max-width: 1279px) {    
-    p {
-        font-size: 14px;
-        padding: 0 120px;
-    }
+/* aqui empiezan los media querys */
 
+@media (max-width: 1279px) {
     .info {
-        padding: 100px 20px;
-        width: 60%;
+        padding:5rem;
+        width: 70%;
     }
 
     .infoSocial {
         padding: 20px;
-    }
-
-    .socialMedia p {
-        padding: 0;
+        width: 50%;
     }
 
     .socials img {
         width: 50px;
-        padding: 10px 20px 0 0;
-    }
-
-    .sectPrinTabs {
-        flex-direction: column;
-        text-align: center;
-        padding: 50px 0;
-    }
-
-    .tabs {
-        padding: 0;
-        width: 100%;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .firstTab {
-        border-radius: 5px 0 0 5px;
-        border: none;
-        border-right: solid 1px #fff;
-    }
-
-    .thirdTab {
-        border-radius: 0 5px 5px 0;
-        border: none;
-        border-left: solid 1px #fff;
-    }
-
-    .infoTabs {
-        padding: 50px 20px 0 20px;
-    }
-
-    .imgTabs {
-        width: 100%;
-        padding: 50px 0 0 0;
-    }
-
-    .subList {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .imgSubList {
-        width: 100%;
-        padding: 50px 0 0 0;
-    }
-
-    .title {
-        flex-direction: column;
-    }
-
-    .title img {
-        padding: 0;
-        width: 50px;
-    }
-
-    .tittle p {
-        text-align: center;
+        padding: 20px 5px;
     }
 
     .subListInfo {
-        padding: 0 50px 60px 50px;   
-        width: 100%;
+        padding: 100px 20px 0 20px;
     }
 
-    .imgSubList {
-        padding-bottom: 150px;
-    }
-
-    .standardSect {
-        flex-direction: column;
-        text-align: center;
+    .imgSubList img, .imgStandard img {
+        width: 400px;
     }
 
     .standardInfo {
-        padding: 50px 50px 0 50px;
-        width: 100%;
+        padding: 20px;
     }
 
-    .standardSect div {
-        width: 100%;
-        padding: 50px 0 150px 0;
+    .tabs {
+        padding: 40px;
     }
 
     .puntos {
+        padding: 0 20px;
         flex-direction: column;
-        padding: 0 100px;
-        gap: 20px;
+    }
+
+    .masPopular {
+        padding: 0;
     }
 
     .contenedor {
@@ -655,19 +589,205 @@ footer p {
         font-size: 20px;
     }
 
+    .contenedor div{
+        width: 280px;
+    }
+}
 
-    .contenedor div {
-        width: 270px;
+@media (max-width: 920px) {
+    header {
+        flex-direction: column;
+        padding: 2rem;
+        height: auto;
     }
 
-    .precio h3 {
-        font-size: 100px;
+    header nav {
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
-    .equipo {
+    .banner {
+        flex-wrap: wrap;
+    }
+
+
+    .info {
+        align-items: center;
+        text-align: center;
+        padding: 4rem 2rem;
+        width: 100%;
+    }
+
+    .formInfo {
+        width: 100%;
+        padding: 2rem;
+        
+    }
+
+    .socialMedia {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .infoSocial {
+        padding: 2rem;
+    }
+
+    .sectPrinTabs {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
-        padding-bottom: 100px;
     }
+
+    .tabs {
+        padding: 3rem;
+        text-align: center;
+        flex-direction: row;
+    }
+
+    .firstTab {
+        border-radius: 5px 0 0 5px;
+        border: none;
+        border-right: solid 0.5px #fff;
+    }
+
+    .thirdTab {
+        border-radius: 0 5px 5px 0;
+        border: none;
+        border-left: solid 0.5px #fff;
+    }
+    .infoTabs {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imgTabs {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .subList {
+        flex-direction: column;
+    }
+
+    .imgSubList, .subListInfo {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .standardSect {
+        flex-direction: column;
+    }
+
+    .standardInfo, .imgStandard {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .contenedor div {
+        width: 340px;
+    }
+
+    .formContacto input {
+        width: 2    00px;
+        margin: 1rem;
+    }
+
+    .formContacto textarea {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info h1 {
+        font-size: 2.5rem;
+    }
+
+    .info p, .info button {
+        font-size: 1rem;
+    }
+
+    .sectPrinTabs {
+        align-items: center;
+    }
+
+    .formContacto form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formContacto input {
+        width: 400px;
+        margin: 10px 0;
+    }
+
+    .formContacto textarea {
+        padding: 0 10px;
+        width: 400px;
+        height: 100px;
+    }
+
+    footer img {
+        width: 350px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info h1 {
+        font-size: 2rem;
+    }
+
+    .info p, .info button {
+        font-size: 0.9rem;
+    }
+
+    .infoSocial {
+        padding: 40px 0;
+    }
+
+    .socials img{
+        width: 40px;
+    }
+
+    .imgSubList img {
+        width: 90%;
+    }
+
+    .imgStandard img{
+        width: 90%;
+    }
+
+    .tabs div {
+        width: 80px;
+        height: 80px;
+    }
+
+    .planes h3 {
+        font-size: 80px;
+    }
+
+    .formContacto input {
+        width: 250px;
+    }
+
+    .formContacto textarea {
+        width: 250px;
+    }
+
+    footer img {
+        width: 300px;
+    }   
 }
